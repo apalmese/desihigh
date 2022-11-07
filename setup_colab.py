@@ -8,8 +8,6 @@ drivepath='/content/drive/'
 
 from   google.colab import drive
 
-
-# 'Hmmm, seems you\'re not in colab :)  Try again later.'
 drive.mount(drivepath, force_remount=True)
 
 mydrive = drivepath + '/MyDrive/'
@@ -22,9 +20,9 @@ try:
 except:
     print('Failed to import desihigh; Cloning.')
 
-    print('git clone https://github.com/michaelJwilson/desihigh.git --depth=1')
+    print('git clone https://github.com/apalmese/desihigh.git --depth=1')
 
-    subprocess.run('git clone https://github.com/michaelJwilson/desihigh.git --depth=1', shell=True, check=True)    
+    subprocess.run('git clone https://github.com/apalmese/desihigh.git --depth=1', shell=True, check=True)    
 
     try:
         sys.path.append(mydrive)
